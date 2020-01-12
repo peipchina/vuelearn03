@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+	<div id="app">
+		<h1>同学录</h1>
+		<div class="head">
+			<el-row :gutter="20" >
+			  <el-col :span="6"><el-input v-model="infos.name" placeholder="姓名"></el-input></el-col>
+			  <el-col :span="6"><el-input v-model="infos.sex" placeholder="年龄"></el-input></el-col>
+			  <el-col :span="6"><el-input v-model="infos.phoneNum" placeholder="电话号码"></el-input></el-col><el-date-picker  v-model="infos.birthday" type="date"  placeholder="选择日期"> </el-date-picker>
+				  </el-input></el-col>			
+			</el-row>
+			<el-row class = "btn">
+				<el-button type="success" v-on:click="addinfo">成功按钮</el-button>
+			</el-row>
+		</div>
+		<div class="tabla">
+			<template>
+			    <el-table
+			      :data="tableData"
+			      style="width: 100%">
+			      <el-table-column
+				      type="index"
+				      width="50">
+				    </el-table-column>
+			      <el-table-column
+			        prop="name"
+			        label="姓名"
+			        width="180">
+			      </el-table-column>
+			      <el-table-column
+			        prop="sex"
+			        label="性别"
+			        width="180">
+			      </el-table-column>
+			      <el-table-column
+			        prop="phoneNum"
+			        label="电话号码"
+			        width="180">
+			      </el-table-column>
+			      <el-table-column
+			        prop="birthday"
+			        label="生日">
+			      </el-table-column>
+			      <el-table-column
+			        prop="birthday"
+			        label="生日">
+			      </el-table-column>
+			    </el-table>
+			 </template>
+		</div>
+	</div>
+	<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>	
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script src="./js/v.js"></script>
+</body>
+</html>
