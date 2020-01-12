@@ -14,8 +14,8 @@
 			<el-row :gutter="20" >
 			  <el-col :span="6"><el-input v-model="infos.name" placeholder="姓名"></el-input></el-col>
 			  <el-col :span="6"><el-input v-model="infos.sex" placeholder="年龄"></el-input></el-col>
-			  <el-col :span="6"><el-input v-model="infos.phoneNum" placeholder="电话号码"></el-input></el-col><el-date-picker  v-model="infos.birthday" type="date"  placeholder="选择日期"> </el-date-picker>
-				  </el-input></el-col>			
+			  <el-col :span="6"><el-input v-model="infos.phoneNum" placeholder="电话号码"></el-input></el-col>
+			  <el-col :span="6"> <el-date-picker  v-model="infos.birthday" type="date"  placeholder="选择日期"> </el-date-picker> </el-col>	
 			</el-row>
 			<el-row class = "btn">
 				<el-button type="success" v-on:click="addinfo">成功按钮</el-button>

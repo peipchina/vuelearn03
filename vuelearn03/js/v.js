@@ -35,7 +35,8 @@ var vm = new Vue({
 },
 	methods:{
 		addinfo: function(){
-			console.log("asdfjlkjge");
+			var p ={sex:this.infos.sex,name:this.infos.name,phoneNum:this.infos.phoneNum,birthday:this.infos.birthday}
+            this.tableData.push(p);
 		}
 	}
 })
